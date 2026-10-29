@@ -30,31 +30,31 @@ export const FeatureHighlights: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 sm:py-32 bg-[#FFFFFF] border-t border-[#E7E7E7]">
+    <section className="py-12 sm:py-16 bg-[#FFFFFF] border-t border-[#E7E7E7]">
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         
         {/* Subtle Section Label */}
-        <div className="mb-14 sm:mb-20 text-center max-w-2xl mx-auto">
-          <span className="text-[11px] font-mono tracking-[0.25em] text-[#686868] uppercase block mb-2">
+        <div className="mb-8 sm:mb-10 text-center max-w-2xl mx-auto">
+          <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-[#686868] uppercase block mb-1.5">
             // Core Engineering Pillars
           </span>
-          <h2 className="text-2xl sm:text-4xl font-black tracking-tight-editorial uppercase text-[#111111]">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight-editorial uppercase text-[#111111]">
             Precision In Every Detail.
           </h2>
         </div>
 
         {/* 4 Spacious Minimalist Columns */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {highlights.map((feat, index) => {
             const Icon = feat.icon;
             return (
               <div 
                 key={feat.title}
-                className="flex flex-col space-y-4 p-6 sm:p-7 rounded-xl bg-[#FAFAFA] border border-[#EBEBEB] hover:border-[#D4D4D4] transition-all duration-300"
+                className="flex flex-col space-y-3 p-5 sm:p-6 rounded-xl bg-[#FAFAFA] border border-[#EBEBEB] hover:border-[#D4D4D4] transition-all duration-300"
               >
                 <div className="flex items-center justify-between">
-                  <div className="w-10 h-10 rounded-lg bg-white border border-[#E7E7E7] flex items-center justify-center text-[#111111]">
-                    <Icon className="w-5 h-5 stroke-[1.5]" />
+                  <div className="w-9 h-9 rounded-lg bg-white border border-[#E7E7E7] flex items-center justify-center text-[#111111]">
+                    <Icon className="w-4 h-4 stroke-[1.5]" />
                   </div>
                   <span className="text-[10px] font-mono text-[#686868]">
                     0{index + 1}
@@ -62,15 +62,15 @@ export const FeatureHighlights: React.FC = () => {
                 </div>
 
                 <div>
-                  <h3 className="text-base font-bold text-[#111111] uppercase tracking-wide">
+                  <h3 className="text-sm sm:text-base font-bold text-[#111111] uppercase tracking-wide">
                     {feat.title}
                   </h3>
-                  <span className="text-[11px] font-mono text-[#686868] block mt-0.5">
+                  <span className="text-[10px] sm:text-[11px] font-mono text-[#686868] block mt-0.5">
                     {feat.subtitle}
                   </span>
                 </div>
 
-                <p className="text-xs sm:text-sm text-[#686868] leading-relaxed pt-2 border-t border-[#EAEAEA]">
+                <p className="text-xs text-[#686868] leading-relaxed pt-2 border-t border-[#EAEAEA]">
                   {feat.description}
                 </p>
               </div>

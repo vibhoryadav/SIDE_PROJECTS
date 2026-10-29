@@ -27,8 +27,8 @@ export const CinematicScroll: React.FC<CinematicScrollProps> = () => {
       headline: 'Feel every detail.',
       copy: 'Experience rich lows, balanced mids, and crisp highs. Custom beryllium diaphragms vibrate with surgical precision across 10Hz to 42,000Hz.',
       icon: Waves,
-      imageScale: 1.08,
-      imageAngle: 6,
+      imageScale: 1.04,
+      imageAngle: 3,
       bgTint: 'bg-[#F9F9F9]',
       accentMetric: '10Hz – 42kHz Hi-Res'
     },
@@ -38,8 +38,8 @@ export const CinematicScroll: React.FC<CinematicScrollProps> = () => {
       headline: 'Comfort without compromise.',
       copy: 'Designed for long listening sessions with a carefully considered fit. Pressure-relieving memory mesh cradles your cranium for all-day effortless wear.',
       icon: Sparkles,
-      imageScale: 1.15,
-      imageAngle: -4,
+      imageScale: 1.06,
+      imageAngle: -2,
       bgTint: 'bg-[#F5F5F5]',
       accentMetric: '254g Featherweight Clamping'
     }
@@ -77,26 +77,26 @@ export const CinematicScroll: React.FC<CinematicScrollProps> = () => {
   return (
     <section
       ref={containerRef}
-      className={`relative py-28 sm:py-36 transition-colors duration-700 ease-out ${currentFeature.bgTint} border-t border-[#E7E7E7] overflow-hidden`}
+      className={`relative py-12 sm:py-16 transition-colors duration-700 ease-out ${currentFeature.bgTint} border-t border-[#E7E7E7] overflow-hidden`}
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         
-        {/* Section Heading */}
-        <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
-          <span className="text-[11px] font-mono tracking-[0.25em] text-[#686868] uppercase block mb-3">
+        {/* Section Heading with tightened margins */}
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
+          <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.25em] text-[#686868] uppercase block mb-1.5">
             // Cinematic Audio Architecture
           </span>
-          <h2 className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight-editorial uppercase text-[#111111] leading-none">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-black tracking-tight-editorial uppercase text-[#111111] leading-none">
             Sound That<br />
             Moves You.
           </h2>
-          <p className="mt-4 text-sm sm:text-base text-[#686868] max-w-lg mx-auto">
+          <p className="mt-2.5 text-xs sm:text-sm text-[#686868] max-w-md mx-auto">
             An intimate choreography of materials, acoustic tuning, and spatial separation.
           </p>
         </div>
 
         {/* Feature Progression Navigation Tabs */}
-        <div className="flex justify-center mb-12 sm:mb-16">
+        <div className="flex justify-center mb-8 sm:mb-10">
           <div className="inline-flex items-center p-1 bg-white border border-[#E7E7E7] rounded-full shadow-xs">
             {features.map((item, idx) => {
               const Icon = item.icon;
@@ -104,7 +104,7 @@ export const CinematicScroll: React.FC<CinematicScrollProps> = () => {
                 <button
                   key={item.id}
                   onClick={() => setActiveStep(idx)}
-                  className={`flex items-center gap-2 px-4 sm:px-6 py-2 rounded-full text-xs font-semibold uppercase tracking-[0.14em] transition-all duration-300 cursor-pointer ${
+                  className={`flex items-center gap-1.5 sm:gap-2 px-3 sm:px-5 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-xs font-semibold uppercase tracking-[0.14em] transition-all duration-300 cursor-pointer ${
                     activeStep === idx
                       ? 'bg-[#101010] text-white shadow-xs'
                       : 'text-[#686868] hover:text-[#111111]'
@@ -119,22 +119,22 @@ export const CinematicScroll: React.FC<CinematicScrollProps> = () => {
           </div>
         </div>
 
-        {/* Cinematic Presentation Canvas: Dynamic Central Product Visual + Highlight Panel */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        {/* Cinematic Presentation Canvas: Strictly Contained Visual + Narrative Panel */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
-          {/* Central Product Visual with Layered Transformation */}
-          <div className="lg:col-span-7 flex items-center justify-center relative min-h-[340px] sm:min-h-[440px]">
+          {/* Central Product Visual - Contained with overflow-hidden */}
+          <div className="lg:col-span-7 flex items-center justify-center relative min-h-[260px] sm:min-h-[340px] overflow-hidden rounded-2xl bg-white/40 p-4">
             {/* Dynamic Halo Glow */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
               <div 
-                className="w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-black/5 blur-3xl transition-transform duration-700"
-                style={{ transform: `scale(${currentFeature.imageScale * 1.1})` }}
+                className="w-60 h-60 sm:w-80 sm:h-80 rounded-full bg-black/5 blur-2xl transition-transform duration-700"
+                style={{ transform: `scale(${currentFeature.imageScale * 1.05})` }}
               />
             </div>
 
-            {/* High-Res Studio Visual */}
+            {/* High-Res Studio Visual (Capped so it never overlaps narrative) */}
             <div 
-              className="relative z-10 w-full max-w-md sm:max-w-lg transition-all duration-700 ease-out"
+              className="relative z-10 w-full max-w-xs sm:max-w-md transition-all duration-500 ease-out"
               style={{
                 transform: `scale(${currentFeature.imageScale}) rotate(${currentFeature.imageAngle}deg)`
               }}
@@ -142,34 +142,34 @@ export const CinematicScroll: React.FC<CinematicScrollProps> = () => {
               <img
                 src="./images/products/overdrive-main.jpg"
                 alt="Vibe District Cinematic Sound Architecture"
-                className="w-full h-auto object-contain drop-shadow-xl"
+                className="w-full h-auto max-h-[320px] object-contain drop-shadow-lg mx-auto"
                 loading="lazy"
               />
             </div>
           </div>
 
           {/* Feature Narrative Card */}
-          <div className="lg:col-span-5 flex flex-col justify-center space-y-6">
-            <div className="space-y-4 bg-white/80 backdrop-blur-sm p-8 sm:p-10 rounded-2xl border border-[#E7E7E7] shadow-xs">
+          <div className="lg:col-span-5 flex flex-col justify-center space-y-4">
+            <div className="space-y-3.5 bg-white/90 backdrop-blur-sm p-6 sm:p-8 rounded-2xl border border-[#E7E7E7] shadow-xs">
               <div className="flex items-center justify-between">
-                <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-[#686868]">
+                <span className="text-[10px] font-mono tracking-[0.2em] uppercase text-[#686868]">
                   {currentFeature.tag}
                 </span>
-                <span className="px-2.5 py-1 rounded bg-[#F5F5F5] text-[10px] font-mono text-[#111111] font-semibold border border-[#E7E7E7]">
+                <span className="px-2.5 py-0.5 rounded bg-[#F5F5F5] text-[10px] font-mono text-[#111111] font-semibold border border-[#E7E7E7]">
                   {currentFeature.accentMetric}
                 </span>
               </div>
 
-              <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight-editorial uppercase text-[#111111] leading-tight transition-all duration-300">
+              <h3 className="text-xl sm:text-2xl font-extrabold tracking-tight-editorial uppercase text-[#111111] leading-tight transition-all duration-300">
                 {currentFeature.headline}
               </h3>
 
-              <p className="text-sm sm:text-base text-[#686868] leading-relaxed transition-all duration-300 font-normal">
+              <p className="text-xs sm:text-sm text-[#686868] leading-relaxed transition-all duration-300 font-normal">
                 {currentFeature.copy}
               </p>
 
               {/* Progress Bar Indicator */}
-              <div className="pt-4 flex items-center space-x-2">
+              <div className="pt-2 flex items-center space-x-2">
                 {features.map((_, i) => (
                   <div
                     key={i}

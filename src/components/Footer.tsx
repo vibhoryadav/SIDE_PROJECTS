@@ -7,31 +7,31 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   return (
-    <footer className="bg-[#FFFFFF] border-t border-[#E7E7E7] pt-16 sm:pt-24 pb-12 text-[#111111]">
+    <footer className="bg-[#FFFFFF] border-t border-[#E7E7E7] pt-10 sm:pt-14 pb-8 text-[#111111]">
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         
         {/* Main Footer Links Columns */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 sm:gap-12 pb-16 border-b border-[#E7E7E7]">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-6 sm:gap-10 pb-10 border-b border-[#E7E7E7]">
           
           {/* Brand Column */}
-          <div className="col-span-2 space-y-4">
-            <span className="font-extrabold tracking-[0.25em] text-base text-[#111111] uppercase block">
+          <div className="col-span-2 space-y-3">
+            <span className="font-extrabold tracking-[0.25em] text-sm sm:text-base text-[#111111] uppercase block">
               VIBE DISTRICT
             </span>
-            <p className="text-xs sm:text-sm text-[#686868] max-w-sm leading-relaxed">
+            <p className="text-xs text-[#686868] max-w-sm leading-relaxed">
               Precision acoustic instruments crafted with monochromatic minimalism. Designed for those who demand transparent sound, architectural comfort, and quiet luxury.
             </p>
-            <div className="text-[11px] font-mono text-[#686868]">
+            <div className="text-[10px] sm:text-[11px] font-mono text-[#686868]">
               Operating in: India • Global Inquiries Open
             </div>
           </div>
 
           {/* Column 1: Audio Products */}
-          <div className="space-y-3">
-            <h4 className="text-xs font-mono font-bold tracking-[0.2em] uppercase text-[#111111]">
+          <div className="space-y-2.5">
+            <h4 className="text-[11px] font-mono font-bold tracking-[0.2em] uppercase text-[#111111]">
               Products
             </h4>
-            <ul className="space-y-2 text-xs text-[#686868]">
+            <ul className="space-y-1.5 text-xs text-[#686868]">
               <li>
                 <button
                   onClick={() => onNavigate('home', 'headphones')}
@@ -67,12 +67,12 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </ul>
           </div>
 
-          {/* Column 2: Studio & Support */}
-          <div className="space-y-3">
-            <h4 className="text-xs font-mono font-bold tracking-[0.2em] uppercase text-[#111111]">
+          {/* Column 2: Service & Care */}
+          <div className="space-y-2.5">
+            <h4 className="text-[11px] font-mono font-bold tracking-[0.2em] uppercase text-[#111111]">
               Service & Care
             </h4>
-            <ul className="space-y-2 text-xs text-[#686868]">
+            <ul className="space-y-1.5 text-xs text-[#686868]">
               <li>
                 <button
                   onClick={() => onNavigate('support')}
@@ -109,11 +109,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           </div>
 
           {/* Column 3: District Studio */}
-          <div className="space-y-3">
-            <h4 className="text-xs font-mono font-bold tracking-[0.2em] uppercase text-[#111111]">
+          <div className="space-y-2.5">
+            <h4 className="text-[11px] font-mono font-bold tracking-[0.2em] uppercase text-[#111111]">
               Manifesto
             </h4>
-            <ul className="space-y-2 text-xs text-[#686868]">
+            <ul className="space-y-1.5 text-xs text-[#686868]">
               <li>
                 <button
                   onClick={() => onNavigate('home')}
@@ -145,12 +145,12 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#686868] gap-4">
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#686868] gap-3">
           <div>
             © {new Date().getFullYear()} VIBE DISTRICT ACOUSTICS LAB. ALL RIGHTS RESERVED.
           </div>
 
-          <div className="flex items-center space-x-6">
+          <div className="flex items-center space-x-5">
             <button onClick={() => onNavigate('support')} className="hover:text-[#111111] cursor-pointer">
               Privacy Policy
             </button>

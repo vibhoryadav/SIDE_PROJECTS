@@ -61,11 +61,11 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
   const relatedProducts = PRODUCTS.filter(p => p.id !== product.id).slice(0, 3);
 
   return (
-    <div className="pt-24 sm:pt-28 pb-24 bg-[#FFFFFF] min-h-screen">
+    <div className="pt-20 sm:pt-24 pb-16 bg-[#FFFFFF] min-h-screen">
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         
         {/* Navigation Breadcrumb */}
-        <div className="flex items-center justify-between pb-8 border-b border-[#E7E7E7] text-xs">
+        <div className="flex items-center justify-between pb-4 border-b border-[#E7E7E7] text-xs">
           <button
             onClick={onBack}
             className="inline-flex items-center space-x-2 text-[#686868] hover:text-[#111111] transition-colors cursor-pointer group"
@@ -273,7 +273,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
         </div>
 
         {/* Tabbed In-Depth Information Section */}
-        <div className="mt-20 pt-10 border-t border-[#E7E7E7]">
+        <div className="mt-12 pt-8 border-t border-[#E7E7E7]">
           {/* Navigation Tabs */}
           <div className="flex items-center space-x-2 sm:space-x-4 border-b border-[#E7E7E7] pb-px overflow-x-auto">
             {[
@@ -376,8 +376,8 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
         </div>
 
         {/* Related Audio Portfolio */}
-        <div className="mt-24 pt-16 border-t border-[#E7E7E7]">
-          <div className="flex items-center justify-between mb-8">
+        <div className="mt-12 pt-10 border-t border-[#E7E7E7]">
+          <div className="flex items-center justify-between mb-6">
             <h3 className="text-xl sm:text-2xl font-black uppercase tracking-tight text-[#111111]">
               Explore Other Frequencies
             </h3>
