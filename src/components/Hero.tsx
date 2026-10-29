@@ -110,7 +110,7 @@ export const Hero: React.FC<HeroProps> = ({ onShopClick, onExploreSound, onProdu
 
           {/* High-Resolution Studio Matte Black Headphone Image */}
           <img
-            src="/images/products/hero-overdrive.jpg"
+            src="./images/products/hero-overdrive.jpg"
             alt="Vibe District Overdrive Flagship Over-Ear Wireless Headphones in Matte Black"
             className="relative z-10 w-full h-full object-contain drop-shadow-sm transition-transform duration-700 ease-out group-hover:scale-[1.03]"
             loading="eager"

@@ -58,9 +58,9 @@ export const PRODUCTS: Product[] = [
       'Quick Start Guide & Warranty Documentation'
     ],
     images: [
-      '/images/products/hero-overdrive.jpg',
-      '/images/products/overdrive-main.jpg',
-      '/images/products/overdrive-angle.jpg'
+      './images/products/hero-overdrive.jpg',
+      './images/products/overdrive-main.jpg',
+      './images/products/overdrive-angle.jpg'
     ],
     badge: 'Flagship Edition',
     highlighted: true
@@ -121,8 +121,8 @@ export const PRODUCTS: Product[] = [
       'Safety Guide & Documentation'
     ],
     images: [
-      '/images/products/pulse-main.jpg',
-      '/images/products/air-main.jpg'
+      './images/products/pulse-main.jpg',
+      './images/products/air-main.jpg'
     ],
     badge: 'Bestseller'
   },
@@ -182,8 +182,8 @@ export const PRODUCTS: Product[] = [
       'Acoustic Calibration Certificate'
     ],
     images: [
-      '/images/products/studio-main.jpg',
-      '/images/products/studio-angle.jpg'
+      './images/products/studio-main.jpg',
+      './images/products/studio-angle.jpg'
     ],
     badge: 'Pro Audio'
   },
@@ -241,8 +241,8 @@ export const PRODUCTS: Product[] = [
       'Quick User Guide & Warranty Card'
     ],
     images: [
-      '/images/products/air-main.jpg',
-      '/images/products/pulse-main.jpg'
+      './images/products/air-main.jpg',
+      './images/products/pulse-main.jpg'
     ],
     badge: 'Lightweight'
   }

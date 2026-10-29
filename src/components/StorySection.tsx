@@ -50,7 +50,7 @@ export const StorySection: React.FC<StorySectionProps> = ({ onExploreClick }) =>
               }}
             >
               <img
-                src="/images/products/overdrive-angle.jpg"
+                src="./images/products/overdrive-angle.jpg"
                 alt="Vibe District acoustic engineering and matte black finishes"
                 className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
                 loading="lazy"

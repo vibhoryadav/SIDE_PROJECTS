@@ -23,7 +23,7 @@ export const BrandPhilosophy: React.FC = () => {
         {/* Wide Cinematic Product Landscape Photograph */}
         <div className="relative rounded-2xl overflow-hidden aspect-16/9 sm:aspect-21/9 bg-[#101010] mb-20 sm:mb-28 border border-[#E7E7E7] shadow-lg group">
           <img
-            src="/images/products/philosophy.jpg"
+            src="./images/products/philosophy.jpg"
             alt="Vibe District acoustic transducer and CNC aluminum components"
             className="w-full h-full object-cover object-center opacity-85 transition-transform duration-700 ease-out group-hover:scale-103"
             loading="lazy"

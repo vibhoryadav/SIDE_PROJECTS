@@ -140,7 +140,7 @@ export const CinematicScroll: React.FC<CinematicScrollProps> = () => {
               }}
             >
               <img
-                src="/images/products/overdrive-main.jpg"
+                src="./images/products/overdrive-main.jpg"
                 alt="Vibe District Cinematic Sound Architecture"
                 className="w-full h-auto object-contain drop-shadow-xl"
                 loading="lazy"
